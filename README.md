@@ -1,2 +1,66 @@
-# oracles-dapp-voting
-# oracles-dapp-voting
+# Oracles network Governance Dapp
+
+## Supported browsers
+
+* Google Chrome v 59.0.3071.115+
+
+## MetaMask plugin setup
+
+* Connect to Oracles network in MetaMask plugin (See [Connect to Oracles network via MetaMask](https://github.com/oraclesorg/oracles-wiki/blob/master/MetaMask-connect.md#connect-to-oracles-network-via-metamask))
+
+* Import your voting key to MetaMask Plugin (See [Governance section from wiki](https://github.com/oraclesorg/oracles-wiki/blob/master/governance.md)).
+
+## Governance Dapp lifecycle
+
+Check [Governance Dapp section from wiki](https://github.com/oraclesorg/oracles-wiki/blob/master/governance.md)
+
+## Ballots page
+You'll see the page with the list of all ballots. Here you can switch to see only your **UNANSWERED** or **EXPIRED** ballots. 
+**Search** by ballots' data is available too.
+
+Single ballot page is opened by clicking **VOTE NOW** button.
+
+![](./docs/ballots.png)
+
+## Single ballot page
+Here you can vote for or against notary. If total number of votes > 3, notary will be added or deleted from the network depending on votes majority after voting will be finished.
+
+![](./docs/ballot.png)
+
+## New ballot page
+Click **NEW BALLOT** button from any page to create a new ballot. 
+
+![](./docs/new_ballot_1.png)
+
+![](./docs/new_ballot_2.png)
+
+## Settings page
+You can return to this page from any page by clicking **Settings** button. You can choose your voting key here.
+
+![](./docs/settings.png)
+
+## Configuration file
+It is configured with [Oracles network contract](https://github.com/oraclesorg/oracles-contract)
+
+Path: `./assets/javascripts/config.json`
+
+```
+{
+  "environment": "live",
+  "Ethereum": {
+    "live": {
+      "contractAddress": "Oracles_contract_address"
+    }
+  }
+}
+```
+
+## Building from source
+
+1) `npm install`
+
+2) `npm run sass`
+
+3) `npm run coffee`
+
+4) `npm start`
